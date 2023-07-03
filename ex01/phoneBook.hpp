@@ -10,6 +10,7 @@ class phoneBook
     private:
         contact contactList[8];
         int     position = 0;
+        int     limiter = 0;
     public:
         phoneBook();
         ~phoneBook();

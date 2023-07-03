@@ -12,16 +12,18 @@ phoneBook::~phoneBook()
 
 void phoneBook::ADD()
 {
-    if(position >= 2)
-        std::cout << "no more available slots" << std::endl;
-    else
-    {
-        contactList[position].addContact();
-        position++;
-    }
+    contactList[position % 2].addContact();
+    if(limiter < 2)
+        limiter++;
+    position++;
 }
 
 void phoneBook::SEARCH()
 {
-    contactList[0].displayName();
+    int i = 0;
+    while (i < limiter)
+    {
+        contactList[i].displayName();
+        i++;
+    }   
 }
