@@ -5,18 +5,17 @@
 #include <string>
 #include "contact.hpp"
 
-class phoneBook
+class PhoneBook
 {
     private:
-        contact contactList[8];
-        int     position = 0;
-        int     limiter = 0;
+        Contact contactList[2];
+        int     position;
+        int     limiter;
     public:
-        phoneBook();
-        ~phoneBook();
+        PhoneBook();
+        ~PhoneBook();
         void    ADD();
         void    SEARCH();
-
 };
 
 #endif

@@ -3,20 +3,23 @@
 
 #include <iostream>
 #include <string>
+#include <sstream>
 
-class contact
+class Contact
 {
     public:
-        contact();
-        ~contact();
-        void    addContact();
-        void    displayName();
+        Contact();
+        ~Contact();
+        std::string toString(int value);
+        void addContact();
+        void    displayInfo(int pos);
+        void    paddingSpaces(std::string str);
     private:
-        std::string fName{};
-        std::string lName{};
-        std::string nName{};
-        std::string pNum{};
-        std::string dSecret{};
+        std::string fName;
+        std::string lName;
+        std::string nName;
+        std::string pNum;
+        std::string dSecret;
 };
 
 

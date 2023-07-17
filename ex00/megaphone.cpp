@@ -1,6 +1,4 @@
-#include <iostream>
-#include <string>
-#include <cctype>
+#include "megaphone.hpp"
 
 void    ft_putstr(std::string str)
 {
@@ -15,6 +13,7 @@ void    ft_putstr(std::string str)
         i++;
     }
 }
+
 int main(int argc, char *argv[])
 {
     int i = 1;

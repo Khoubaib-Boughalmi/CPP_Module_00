@@ -1,16 +1,15 @@
 #include "phoneBook.hpp"
 #include "contact.hpp"
 
-phoneBook::phoneBook()
+PhoneBook::PhoneBook()
 {
 }
 
-phoneBook::~phoneBook()
+PhoneBook::~PhoneBook()
 {
-
 }
 
-void phoneBook::ADD()
+void PhoneBook::ADD()
 {
     contactList[position % 2].addContact();
     if(limiter < 2)
@@ -18,12 +17,16 @@ void phoneBook::ADD()
     position++;
 }
 
-void phoneBook::SEARCH()
+void PhoneBook::SEARCH()
 {
     int i = 0;
+    std::cout << "|-------------------------------------------|\n";
+    std::cout << "|     Index|First name| Last name|  Nickname|\n";
+    std::cout << "|-------------------------------------------|\n";
     while (i < limiter)
     {
-        contactList[i].displayName();
+        contactList[i].displayInfo(i);
         i++;
     }   
+    std::cout << "|-------------------------------------------|\n";
 }

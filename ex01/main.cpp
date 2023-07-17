@@ -4,17 +4,23 @@
 
 int main(int argc, char *argv[])
 {
-    phoneBook PhoneBook;
+    (void) argc;
+    (void) argv;
+
+    PhoneBook phoneBook;
+    std::string input;
     while (1)
     {
-        std::string input;
+        std::cout << "Enter a command: ";
         std::getline(std::cin, input);
-        if(input == "EXIT")    
+        if(input == "EXIT")
             return (0);
-        if(input == "ADD")
-            PhoneBook.ADD();
-        if(input == "SEARCH")
-            PhoneBook.SEARCH();
+        else if(input == "ADD")
+            phoneBook.ADD();
+        else if(input == "SEARCH")
+            phoneBook.SEARCH();
+        else
+            std::cout << "Not a valid command! Try again\n";
     }
     return (0);
 }
