@@ -11,8 +11,8 @@ PhoneBook::~PhoneBook()
 
 void PhoneBook::ADD()
 {
-    contactList[position % 2].addContact();
-    if(limiter < 2)
+    contactList[position % 8].addContact();
+    if(limiter < 8)
         limiter++;
     position++;
 }

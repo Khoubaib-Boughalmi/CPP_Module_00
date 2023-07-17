@@ -8,7 +8,7 @@
 class PhoneBook
 {
     private:
-        Contact contactList[2];
+        Contact contactList[8];
         int     position;
         int     limiter;
     public:

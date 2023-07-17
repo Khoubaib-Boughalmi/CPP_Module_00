@@ -10,12 +10,12 @@ class Contact
     public:
         Contact();
         ~Contact();
-        std::string toString(int value);
         void addContact();
         void    displayAllInfo(int pos);
         void    displayUserInfo();
         void    paddingSpaces(std::string str);
     private:
+        std::string toString(int value);
         std::string fName;
         std::string lName;
         std::string nName;

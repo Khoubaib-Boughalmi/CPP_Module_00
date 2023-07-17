@@ -105,7 +105,7 @@ void    Contact::addContact()
     std::getline(std::cin, pNum);
     while (pNum == "\n" || pNum == "\0" || !isValidPhoneNumber(pNum))
     {
-        std::cout << "Empty field not valid! Please, try again.\n";
+        std::cout << "Invalid Phone Number! Please, try again.\n";
         std::cout << "Enter Phone Number: ";
         std::getline(std::cin, pNum);
     }
