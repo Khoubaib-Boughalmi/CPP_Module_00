@@ -57,8 +57,22 @@ void   Contact::displayUserInfo()
     std::cout << "First Name: " << fName << std::endl;
     std::cout << "Last Name : " << lName << std::endl;
     std::cout << "NickName  : " << nName << std::endl;
-    // std::cout << "Phone Number: " << fName << std::endl;
-    // std::cout << "Darkest Secret: " << fName << std::endl;
+    std::cout << "Phone Number: " << pNum << std::endl;
+    std::cout << "Darkest Secret: " <<  dSecret << std::endl;
+}
+
+int  isValidPhoneNumber(std::string pNum)
+{
+    size_t i = 0;
+    if(pNum.length() < 6)
+        return (0);
+    while (i < pNum.length())
+    {
+        if(!(pNum[i] >= '0' && pNum[i] <= '9'))
+            return (0);
+        i++;
+    }
+    return (1);
 }
 
 void    Contact::addContact()
@@ -87,8 +101,20 @@ void    Contact::addContact()
         std::cout << "Enter Nickname: ";
         std::getline(std::cin, nName);
     }
-    // std::cout << "Enter Phone Number";
-    // std::cin >> pNum;
-    // std::cout << "Enter Darkest Secret";
-    // std::cin >> dSecret;
+    std::cout << "Enter Phone Number: ";
+    std::getline(std::cin, pNum);
+    while (pNum == "\n" || pNum == "\0" || !isValidPhoneNumber(pNum))
+    {
+        std::cout << "Empty field not valid! Please, try again.\n";
+        std::cout << "Enter Phone Number: ";
+        std::getline(std::cin, pNum);
+    }
+    std::cout << "Enter Darkest Secret: ";
+    std::getline(std::cin, dSecret);
+    while (dSecret == "\n" || dSecret == "\0")
+    {
+        std::cout << "Empty field not valid! Please, try again.\n";
+        std::cout << "Enter Darkest Secret: ";
+        std::getline(std::cin, dSecret);
+    }
 }
