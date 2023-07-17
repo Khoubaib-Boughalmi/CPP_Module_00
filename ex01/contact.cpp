@@ -35,7 +35,7 @@ std::string truncateStr(std::string initialStr)
     return initialStr;
 }
 
-void   Contact::displayInfo(int pos)
+void   Contact::displayAllInfo(int pos)
 {
     std::cout << "|";
     this->paddingSpaces(toString(pos));
@@ -50,6 +50,15 @@ void   Contact::displayInfo(int pos)
     this->paddingSpaces(nName);
     std::cout << truncateStr(nName);
     std::cout << "|\n";
+}
+
+void   Contact::displayUserInfo()
+{
+    std::cout << "First Name: " << fName << std::endl;
+    std::cout << "Last Name : " << lName << std::endl;
+    std::cout << "NickName  : " << nName << std::endl;
+    // std::cout << "Phone Number: " << fName << std::endl;
+    // std::cout << "Darkest Secret: " << fName << std::endl;
 }
 
 void    Contact::addContact()

@@ -12,7 +12,8 @@ class Contact
         ~Contact();
         std::string toString(int value);
         void addContact();
-        void    displayInfo(int pos);
+        void    displayAllInfo(int pos);
+        void    displayUserInfo();
         void    paddingSpaces(std::string str);
     private:
         std::string fName;
