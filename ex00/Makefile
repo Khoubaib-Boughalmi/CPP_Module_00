@@ -1,8 +1,13 @@
 NAME = megaphone
+CC = c++
 CFLAGS = -std=c++98 -Wall -Wextra -Werror
+
 SRCS = megaphone.cpp
+
 OBJS = ${SRCS:.cpp=.o}
-CC = g++
+
+%.o:%.cpp
+		${CC} ${CFLAGS} -c $^ -o $@
 
 ${NAME}: ${OBJS}
 		${CC} ${CFLAGS} ${OBJS} -o ${NAME}

@@ -19,16 +19,16 @@ void PhoneBook::ADD()
 
 void PhoneBook::showMoreInfo()
 {
-    std::string position;
+    std::string index;
 
     std::cout << "Please select the index for more info: ";
-    std::getline(std::cin, position);
-    while(position.length() > 1 || !(position[0] >= '0' && position[0] < limiter + '0'))
+    std::getline(std::cin, index);
+    while(index.length() > 1 || !(index[0] >= '0' && index[0] < limiter + '0'))
     {
         std::cout << "Please enter a valid index: ";
-        std::getline(std::cin, position);
+        std::getline(std::cin, index);
     }
-    contactList[position[0] - '0'].displayUserInfo();
+    contactList[index[0] - '0'].displayUserInfo();
 }
 
 void PhoneBook::SEARCH()

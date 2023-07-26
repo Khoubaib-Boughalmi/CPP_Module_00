@@ -1,4 +1,6 @@
-#include "megaphone.hpp"
+#include <iostream>
+#include <string>
+#include <cctype>
 
 void    ft_putstr(std::string str)
 {
@@ -6,8 +8,7 @@ void    ft_putstr(std::string str)
     while (str[i])
     {    
         if(str[i] >= 'a' && str[i] <= 'z')
-            std::cout << static_cast<char>(std::toupper(\
-                static_cast<unsigned char>(str[i])));
+            std::cout << static_cast<char>(std::toupper(static_cast<unsigned char>(str[i])));
         else
             std::cout << str[i];
         i++;
